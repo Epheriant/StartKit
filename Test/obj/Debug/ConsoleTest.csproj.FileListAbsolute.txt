@@ -28,3 +28,13 @@ C:\code\EntityTest\Test\bin\Debug\EntityTest.pdb
 C:\code\EntityTest\Test\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
 C:\code\EntityTest\Test\obj\Debug\Test.exe
 C:\code\EntityTest\Test\obj\Debug\Test.pdb
+D:\code\csharp\StartKit\Test\bin\Debug\Test.exe.config
+D:\code\csharp\StartKit\Test\bin\Debug\Test.exe
+D:\code\csharp\StartKit\Test\bin\Debug\Test.pdb
+D:\code\csharp\StartKit\Test\bin\Debug\AppTools.dll
+D:\code\csharp\StartKit\Test\bin\Debug\EntityTest.dll
+D:\code\csharp\StartKit\Test\bin\Debug\AppTools.pdb
+D:\code\csharp\StartKit\Test\bin\Debug\EntityTest.pdb
+D:\code\csharp\StartKit\Test\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+D:\code\csharp\StartKit\Test\obj\Debug\Test.exe
+D:\code\csharp\StartKit\Test\obj\Debug\Test.pdb

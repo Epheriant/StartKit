@@ -12,3 +12,8 @@ C:\code\EntityTest\AppTools\bin\Debug\AppTools.pdb
 C:\code\EntityTest\AppTools\obj\Debug\AppTools.dll
 C:\code\EntityTest\AppTools\obj\Debug\AppTools.pdb
 C:\code\EntityTest\AppTools\obj\Debug\AppTools.csprojResolveAssemblyReference.cache
+D:\code\csharp\StartKit\AppTools\bin\Debug\AppTools.dll
+D:\code\csharp\StartKit\AppTools\bin\Debug\AppTools.pdb
+D:\code\csharp\StartKit\AppTools\obj\Debug\AppTools.csprojResolveAssemblyReference.cache
+D:\code\csharp\StartKit\AppTools\obj\Debug\AppTools.dll
+D:\code\csharp\StartKit\AppTools\obj\Debug\AppTools.pdb
