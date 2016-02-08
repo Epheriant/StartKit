@@ -1,0 +1,13 @@
+C:\Users\mhernandez\code\EntityTest\EntityTest\bin\Debug\EntityTest.dll
+C:\Users\mhernandez\code\EntityTest\EntityTest\bin\Debug\EntityTest.pdb
+C:\Users\mhernandez\code\EntityTest\EntityTest\obj\Debug\EntityTest.dll
+C:\Users\mhernandez\code\EntityTest\EntityTest\obj\Debug\EntityTest.pdb
+C:\Users\mhernandez\code\EntityTest\EntityTest\obj\Debug\ValueTypes.csprojResolveAssemblyReference.cache
+D:\code\csharp\EntityTest\EntityTest\bin\Debug\EntityTest.dll
+D:\code\csharp\EntityTest\EntityTest\bin\Debug\EntityTest.pdb
+D:\code\csharp\EntityTest\EntityTest\obj\Debug\EntityTest.dll
+D:\code\csharp\EntityTest\EntityTest\obj\Debug\EntityTest.pdb
+C:\code\EntityTest\EntityTest\bin\Debug\EntityTest.dll
+C:\code\EntityTest\EntityTest\bin\Debug\EntityTest.pdb
+C:\code\EntityTest\EntityTest\obj\Debug\EntityTest.dll
+C:\code\EntityTest\EntityTest\obj\Debug\EntityTest.pdb

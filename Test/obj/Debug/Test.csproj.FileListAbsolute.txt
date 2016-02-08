@@ -1,0 +1,8 @@
+c:\users\mhernandez\code\EntityTest\Test\bin\Debug\Test.exe.config
+c:\users\mhernandez\code\EntityTest\Test\bin\Debug\Test.exe
+c:\users\mhernandez\code\EntityTest\Test\bin\Debug\Test.pdb
+c:\users\mhernandez\code\EntityTest\Test\bin\Debug\EntityTest.dll
+c:\users\mhernandez\code\EntityTest\Test\bin\Debug\EntityTest.pdb
+c:\users\mhernandez\code\EntityTest\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+c:\users\mhernandez\code\EntityTest\Test\obj\Debug\Test.exe
+c:\users\mhernandez\code\EntityTest\Test\obj\Debug\Test.pdb
