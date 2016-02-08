@@ -17,6 +17,8 @@ namespace AppTools
         {           
            return Enum.Parse(en.GetType(), arg, true);
         }
+
+        
     }
     
 
@@ -29,7 +31,7 @@ namespace AppTools
         public static readonly char Delim = System.IO.Path.DirectorySeparatorChar;
         public static IDictionary<string, string> AssemblyDictionary { get; private set; }
         public static HashSet<string> Processed = new HashSet<string>();
-        public static IDictionary<string, Configurable> DefaultInit = new Dictionary<string, Configurable>();
+      //  public static IDictionary<string, Configurable> DefaultInit = new Dictionary<string, Configurable>();
         private static readonly string EXT = ".json";
         #endregion
 

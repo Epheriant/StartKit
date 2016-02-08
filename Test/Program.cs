@@ -1,13 +1,8 @@
 ﻿using ValueTypes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppTools;
 using AppTools.Util;
-using System.Text.RegularExpressions;
-using System.Web.Script.Serialization;
+
 
 namespace Test
 {
@@ -121,10 +116,12 @@ namespace Test
             Console.Out.WriteLine(CatValue.Parse("Season.Spring").Index); 
        }
 
+
+
         public static void TestSerializer()
         {
             TestConfig tc = new TestConfig();
-            string Data = JSerializer.Serialize(tc);
+            string Data = serial.Serialize(tc);
             Console.Out.WriteLine("Serialized:  " + Data);
             var d2 =
                     "{" +
@@ -140,80 +137,26 @@ namespace Test
                     "  ," +
                     "  \"TestOrder\":\"SECOND\"" +
                     "}";
-          //  var t2 = JSerializer.Deserialize(tc.GetType(), d2);
-          //  var t3 = (TestConfig)t2;
-           // Console.Out.WriteLine(t3.Prop1);
-           // Console.Out.WriteLine(t3.Prop2);
-           // Console.Out.WriteLine(t3.Prop3);
-           // Console.Out.WriteLine(t3.TestOrder);
-           // Console.In.ReadLine();
+            var t2 = serial.Deserialize(tc.GetType(), d2);
+
         }
 
-
-
-       
-
+        public static ITextFormatSerializer serial = new ConfigSerializer();
+        public static DynamicConverter objConv = new DynamicConverter();
 
         static void Main(string[] args)
         {
-
             var cfg   = new AppTools.Config();
-            var input = JSerializer.PretyfyJSON(JSerializer.Serialize(cfg));
+            var input = serial.Serialize(cfg);
             Console.Out.WriteLine(input);
 
-            dynamic v = DynamicConverter.ToDynamic(cfg);
-            var input2 = JSerializer.PretyfyJSON(DynamicConverter.SerializeDynamic(v));
+            dynamic v = objConv.ConvertTo(cfg);
+            var input2 = serial.Serialize(v);
             Console.Out.WriteLine("\n\n" + input2);
 
-          //  var cfg2 = JSerializer.Deserialize(cfg.GetType(), input);
-            Console.Out.WriteLine(cfg);
+            var s2 = serial.FormatJson(input2);
 
-
-            //var serializer = new JavaScriptSerializer();
-            //serializer.RegisterConverters(new[] { new DynamicJsonConverter() });
-            //dynamic obj = serializer.Deserialize(JSONSerializer.FormalJSON(input), typeof(object));
-            //dynamic o2 = obj.Prob3b;
-
-            //Console.Out.WriteLine(serializer.Serialize(obj.Prob3b.Pr1));
-            //Console.Out.WriteLine(o2);
-
-            //  input = "{\"Prop1\":\"Initialdsaf\",\"Prop2\":4,\"Prop3\":5,\"Prop4\":[\"XA\",\"XB\",\"XC\"],\"TestOrder\":\"SECOND\"}";
-
-            //  Console.Out.WriteLine("In: " + input);
-            //  Console.WriteLine("\n\nOut: \n" + JSONSerializer.FormalJSON(input));
-
-
-            // TestUnits();
-            //   TestSerializer();
-
-            /* App.Name = "ConsoleTest";
-             App.CfgDir = @"C:\tmp\test\init";
-             App.LogDir   = @"C:\tmp\test\logs";
-
-             Console.Out.WriteLine("Prop1: " + App.Config.Test.Prop1);
-             Console.Out.WriteLine("Prop2: " + App.Config.Test.Prop2);
-             Console.Out.WriteLine("Prop3: " + App.Config.Test.Prop3);
-             Console.Out.WriteLine("Cfg: " + App.CfgDir);
-
-             //Simmulating command line arguments
-
-             //string[] vec = new string[] {"-Log",@"c:\tmp\test\log",  "-cfg", @"c:\tmp\test\init",  "-name",
-             //                            "TestApp", "-Test.p1", "WHATEVER", "-p2", "0.3333" };
-             //Settings.Load(vec);
-             Settings.Load();
-
-              Console.Out.WriteLine("Prop1:\t" + App.Config.Test.Prop1);
-              Console.Out.WriteLine("Prop2:\t" + App.Config.Test.Prop2);
-              Console.Out.WriteLine("Prop3:\t" + App.Config.Test.Prop3);
-              Console.Out.WriteLine("TestOrder:\t" + App.Config.Test.TestOrder);
-
-              Console.Out.WriteLine("Name:\t" + App.Name);
-              Console.Out.WriteLine("CfgDir:\t" + App.CfgDir);
-              Console.Out.WriteLine("LogDir:\t" + App.LogDir);
-
-               Console.Out.WriteLine("\n\n"); */
-
-
+            Console.Out.WriteLine("\n\n" + s2);
         }
     }
 }

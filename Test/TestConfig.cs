@@ -18,7 +18,7 @@ namespace Test
     }
 
 
-    [DataContract]  public class TestConfig: Configurable
+    [DataContract]  public class TestConfig
     {
         public static TestConfig Default { get; private set;  }
 

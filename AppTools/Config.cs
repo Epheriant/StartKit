@@ -15,51 +15,18 @@ namespace AppTools {
         DEVEL,
         TRACE
     }
-
-    public struct Choice<T> 
-    {
-        private T _value;
-
-        public Choice(T arg)
-        {
-            if (!(arg is Enum))
-                throw new Exception("Choices can only contain Enums");
-            _value = arg;
-        }
-
-        public static implicit operator Choice<T>(string arg)
-        {
-            return new Choice<T>( (T) Enum.Parse(typeof(T), arg));
-        }
-
-        public static implicit operator T(Choice<T> arg)
-        {
-            return arg._value;
-        }
-
-        public static implicit operator Choice<T>(T arg)
-        {
-            return new Choice<T>(arg);
-        }
-
-        public override string ToString()
-        {
-            return _value.ToString(); 
-        }
-    }
-
-    public class Triple
-    {
+    
+    public class Triple  {
         public string First { get; set; }
         public string Second { get; set; }
         public string Third { get; set; }
     }
 
-     public class Config: Configurable  {
+     public class Config  {
 
-        public static Config Default { get; private set;  }
+      public static Config Default { get; private set;  }
         
-        public void Configure(dynamic obj)   {
+      public void Configure(dynamic obj)   {
             this.Name      = obj.Name    ?? "DefName";
             this.LogCons   = obj.LogCons != null ? obj.LogCons : true;
             this.LogDir    = obj.LogDir ?? "DefDir";
@@ -76,6 +43,8 @@ namespace AppTools {
         public bool    LogFile   { get; set; }           
         public Level RunLevel { get; set; }   
         public Triple TestTriple { get; set; }
+        public Triple[] TripleArray { get; set; }
+
         public Config() {
             Name = "MyApp";
             LogCons = true;
@@ -84,6 +53,10 @@ namespace AppTools {
             LogDir = "C:/Logs/";
             RunLevel = Level.DEVEL;
             TestTriple = new Triple() { First = "Duarte", Second = "Sanchez", Third = "Mella" };
+            var temp = new List<Triple>();
+            for (int i = 0; i < 10; i++)
+                temp.Add(new Triple() { First = "Duarte" + i, Second = "Sanchez" + i, Third = "Mella" + i });
+            TripleArray = temp.ToArray();
         }
     }
 }

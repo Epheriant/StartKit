@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\App.cs" />
-    <Compile Include="Base\Configurable.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Util\DynamicConverter.cs" />
-    <Compile Include="Util\Serializer.cs" />
+    <Compile Include="Util\Helper.cs" />
+    <Compile Include="Util\IObjectConverter.cs" />
+    <Compile Include="Util\ITextFormatSerializer.cs" />
+    <Compile Include="Util\ConfigSerializer.cs" />
     <Compile Include="Base\Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
