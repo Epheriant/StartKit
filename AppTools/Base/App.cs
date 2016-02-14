@@ -11,6 +11,7 @@ namespace AppTools
 {
     public class App 
     {
+        //This is a comment
         public static string Name
         {
             get { return Config.Default.Name;  }
